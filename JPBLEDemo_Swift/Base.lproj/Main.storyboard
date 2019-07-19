@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="uqc-cL-0FG">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="JPBLEDemo_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nQi-zz-GhH">
+                                <rect key="frame" x="0.0" y="623" width="187.5" height="44"/>
+                                <color key="backgroundColor" red="0.1822621384" green="0.72431742519999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="dUm-x3-Nt0"/>
+                                </constraints>
+                                <state key="normal" title="固件升级">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="updateDevice:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fVT-mu-twS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j9n-WJ-QLf">
+                                <rect key="frame" x="187.5" y="623" width="187.5" height="44"/>
+                                <color key="backgroundColor" red="1" green="0.71764705880000002" blue="0.19215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="获取版本号">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="当前固件版本：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mcd-bv-Whv">
+                                <rect key="frame" x="20" y="590" width="122" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="当前硬件版本：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s23-fl-kP5">
+                                <rect key="frame" x="20" y="551" width="122" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rvv-H1-tme">
+                                <rect key="frame" x="19.5" y="499" width="123" height="30"/>
+                                <state key="normal" title="不带握手固件升级"/>
+                                <connections>
+                                    <action selector="testUpdateFirm:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cyh-Nd-sdF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="mcd-bv-Whv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="1mK-7g-JX7"/>
+                            <constraint firstItem="j9n-WJ-QLf" firstAttribute="width" secondItem="nQi-zz-GhH" secondAttribute="width" id="7Y5-EH-rAb"/>
+                            <constraint firstItem="nQi-zz-GhH" firstAttribute="top" secondItem="mcd-bv-Whv" secondAttribute="bottom" constant="12" id="BHa-tH-Wbi"/>
+                            <constraint firstItem="j9n-WJ-QLf" firstAttribute="height" secondItem="nQi-zz-GhH" secondAttribute="height" id="Epm-e4-xY5"/>
+                            <constraint firstItem="s23-fl-kP5" firstAttribute="top" secondItem="rvv-H1-tme" secondAttribute="bottom" constant="22" id="Fzt-Lg-jTn"/>
+                            <constraint firstItem="nQi-zz-GhH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="KJC-d8-geh"/>
+                            <constraint firstAttribute="trailing" secondItem="j9n-WJ-QLf" secondAttribute="trailing" id="Q0m-K0-s92"/>
+                            <constraint firstItem="s23-fl-kP5" firstAttribute="centerX" secondItem="rvv-H1-tme" secondAttribute="centerX" id="atS-27-pu2"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="nQi-zz-GhH" secondAttribute="bottom" id="lOa-08-18q"/>
+                            <constraint firstItem="j9n-WJ-QLf" firstAttribute="leading" secondItem="nQi-zz-GhH" secondAttribute="trailing" id="n6h-zJ-wBw"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="mcd-bv-Whv" secondAttribute="trailing" constant="20" symbolic="YES" id="oHB-gQ-Ma3"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="j9n-WJ-QLf" secondAttribute="bottom" id="p9m-b1-TZx"/>
+                            <constraint firstItem="mcd-bv-Whv" firstAttribute="leading" secondItem="s23-fl-kP5" secondAttribute="leading" id="r9G-AA-nrq"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="s23-fl-kP5" secondAttribute="trailing" constant="20" symbolic="YES" id="sQv-Sp-gV8"/>
+                            <constraint firstItem="mcd-bv-Whv" firstAttribute="top" secondItem="s23-fl-kP5" secondAttribute="bottom" constant="18" id="xUu-Bg-Bpo"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="00l-G0-7FA"/>
+                    <connections>
+                        <outlet property="firmLabel" destination="mcd-bv-Whv" id="4bs-dp-YFg"/>
+                        <outlet property="hardLabel" destination="s23-fl-kP5" id="1sB-a5-LTS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="836" y="-561"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Cxx-df-JOJ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uqc-cL-0FG" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="C7s-Ew-3eO">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="n53-rD-e5x"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vn7-Wa-swj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="61.600000000000001" y="-560.86956521739137"/>
+        </scene>
+    </scenes>
+</document>

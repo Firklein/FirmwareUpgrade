@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SetVC" customModule="JPBLEDemo_Swift" customModuleProvider="target">
+            <connections>
+                <outlet property="firmwareField" destination="yuP-Pj-oxe" id="vy2-bu-v9S"/>
+                <outlet property="hardwareField" destination="VWd-H9-IhT" id="Kaf-WP-Rb7"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入硬件版本" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VWd-H9-IhT">
+                    <rect key="frame" x="127" y="66" width="121" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="m02-II-IxC"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入固件版本" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yuP-Pj-oxe">
+                    <rect key="frame" x="127" y="136" width="121" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="vdC-JI-XZ3"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oky-V2-6CI">
+                    <rect key="frame" x="147" y="260" width="80" height="44"/>
+                    <color key="backgroundColor" red="0.1822621384" green="0.72431742519999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="69X-gr-5CG"/>
+                        <constraint firstAttribute="height" constant="44" id="VqC-zE-kL2"/>
+                    </constraints>
+                    <state key="normal" title="保存">
+                        <color key="titleColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="saveVersion:" destination="-1" eventType="touchUpInside" id="IWF-wY-z01"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="VWd-H9-IhT" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="JON-52-vrl"/>
+                <constraint firstItem="yuP-Pj-oxe" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="OZ4-xc-K3P"/>
+                <constraint firstItem="yuP-Pj-oxe" firstAttribute="top" secondItem="VWd-H9-IhT" secondAttribute="bottom" constant="26" id="Qjg-eR-0WF"/>
+                <constraint firstItem="oky-V2-6CI" firstAttribute="top" secondItem="yuP-Pj-oxe" secondAttribute="bottom" constant="80" id="SHz-NZ-fqF"/>
+                <constraint firstItem="oky-V2-6CI" firstAttribute="centerX" secondItem="yuP-Pj-oxe" secondAttribute="centerX" id="teV-Wb-wN1"/>
+                <constraint firstItem="VWd-H9-IhT" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="66" id="wdD-Yk-Ffm"/>
+            </constraints>
+            <point key="canvasLocation" x="-150" y="11"/>
+        </view>
+    </objects>
+</document>
